@@ -1,0 +1,129 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    min-height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+}
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    padding-bottom: 80px;
+}
+.result {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -10px;
+    max-width: 800px;
+}
+.result__item{
+    max-width: 20%;
+    padding: 10px;
+    position: relative;
+}
+.result__item:hover .result__item-img{
+    filter: blur(2px);
+}
+.result__item:hover .result__item-btn{
+    opacity: 1;
+    visibility: visible;
+}
+.result__item-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all .3s;
+}
+.result__item-btn{
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    text-decoration: none;padding: 5px 10px;
+    color: #000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+.title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+.pagination {
+    position: fixed;
+    bottom: 0;
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+.page-number-btn {
+    width: 40px;
+    height: 40px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.page-number-btn +.page-number-btn{
+    margin-left: 10px;
+}
+.page-number-btn.active {
+    background-color: #fcac45;
+}
+
+.aside {
+    background-color:#f3f3f3;
+    max-width: 300px;
+    width: 100%;
+    padding: 10px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.aside__info {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.aside__empty {
+    margin: auto;
+    font-size: 26px;
+    text-align: center;
+}
+.aside__title {
+    font-weight: 700;
+    margin: 20px 0 5px
+}
+.aside__img-wrapper {
+    max-width: 100%;
+    height: 340px;
+    position: relative;
+    margin-bottom: 20px;
+}
+.aside__img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+.aside__description {
+    font-size: 20px;
+}
+.aside__full {
+    margin-top: auto;
+    background-color: #fcac45;
+    color: #000;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    text-align: center;
+}
